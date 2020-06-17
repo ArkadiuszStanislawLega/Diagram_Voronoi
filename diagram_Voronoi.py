@@ -88,21 +88,23 @@ def licz_symetralna(point_1, point_2):
     x = riverse_x + point_2.coordinate_x
 
     print(f'{y}=a*{x}')
+    print(f'{x}a={y} /{x}')
 
-    a = x*y
-    print(f'a={a}')
+    a = y/x
+    print(f'a={round(a,2)}')
     print(SHORT_SEPARATOR*"-")
-    print(f'{point_1.coordinate_y}={a}*{point_1.coordinate_x}+b')
+
+    print(f'{point_1.coordinate_y}={round(a,2)}*{point_1.coordinate_x}+b')
     if point_1.coordinate_y < 0:
-        print(f'b=-({a}*{point_1.coordinate_x}){point_1.coordinate_y}')
+        print(f'b=-({round(a,2)}*{point_1.coordinate_x}){point_1.coordinate_y}')
     else:
-        print(f'b=-({a}*{point_1.coordinate_x})+{point_1.coordinate_y}')
+        print(f'b=-({round(a,2)}*{point_1.coordinate_x})+{point_1.coordinate_y}')
 
     b = point_1.coordinate_y + ((a * point_1.coordinate_x) * (-1))
-    print(f'b={b}')
+    print(f'b={round(b,2)}')
     print(SHORT_SEPARATOR*"=")
 
-    print(f'a={a}, b={b}')
+    print(f'a={round(a,2)}, b={round(b,2)}')
     print(SHORT_SEPARATOR*"*")
 
     print(
